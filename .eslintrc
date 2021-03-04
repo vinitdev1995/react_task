@@ -1,0 +1,60 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "jsx": true,
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier", "react", "react-hooks", "import"],
+  "rules": {
+    "no-console": "off",
+    "no-trailing-spaces": "error",
+    "object-curly-newline": "off",
+    "max-len": ["error", { "code": 120 }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
+    "lines-between-class-members": ["error", "always"],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
+    "react/sort-prop-types": ["error", {
+      "callbacksLast": true,
+      "ignoreCase": false,
+      "requiredFirst": true,
+      "sortShapeProp": true,
+      "noSortAlphabetically": false
+    }],
+    "comma-dangle": [
+      "error", {
+        "arrays": "always-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": 0,
+    "react/jsx-props-no-spreading": "off",
+    "react/display-name": "off",
+    "jsx-a11y/anchor-is-valid": 0
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "settings": {
+    "react": {
+      "version": "16"
+    }
+  }
+}
