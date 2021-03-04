@@ -1,36 +1,30 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import rootSaga from "../../redux/modules/orderDetails/orderDetailsSaga";
+import { Typography } from "@material-ui/core";
 import { fetchOrderDetails } from "../../redux/modules/orderDetails/orderDetailsActions";
+import "./Dashboard.scss";
 
-const Dashboard = ({ getOrderDetails }) => {
+const Dashboard = ({ getOrders }) => {
   useEffect(() => {
-    getOrderDetails();
+    getOrders();
   }, []);
 
   return (
-    <div>
-      <span>hello</span>
+    <div className="dashboard">
+      <Typography paragraph>Table</Typography>
     </div>
   );
 };
-const mapStateToProps = () => {
-  return {};
+
+const mapStateToProps = state => {
+  return {
+    orders: state.orderDetails || []
+  };
 };
 const mapDispatchToProps = dispatch => {
   return {
-    getOrderDetails: payload => dispatch(fetchOrderDetails(payload))
+    getOrders: payload => dispatch(fetchOrderDetails(payload))
   };
 };
-// export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
-
-// const mapStateToProps = () => {
-//   return {};
-// };
-// const mapDispatchToProps = () => {
-//   return {
-//     getOrderDetails: payload => dispatch(fetchOrderDetails(payload))
-//   };
-// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

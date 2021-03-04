@@ -14,7 +14,7 @@ export const orderDetailsReducer = handleActions(
       action
     ) => ({
       ...state,
-      details: action.payload.order || null,
+      details: action.payload.orders || null,
       fetchOrderDetailsLoading: false,
       fetchOrderDetailsFailure: false,
       fetchOrderDetailsLoaded: true

@@ -2,7 +2,6 @@ import axios from "axios";
 import { get } from "lodash";
 import { call, put } from "redux-saga/effects";
 import { config } from "../utils/config";
-import { clearStorage } from "./common";
 import { routePaths } from "../routes";
 export const requestPending = type => `${type}_PENDING`;
 export const requestSuccess = type => `${type}_SUCCESS`;
@@ -82,7 +81,6 @@ export const request = ({
       const errRes = get(err, "response", err);
 
       if (errRes.status === 401) {
-        clearStorage();
         window.location.pathname = routePaths.signUp;
       }
 
