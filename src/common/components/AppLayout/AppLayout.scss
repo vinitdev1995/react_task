@@ -17,5 +17,13 @@
       background: #FFFFFF;
       color: #000;
     }
+    &:active{
+      background: lightblue;
+      color: #000;
+    }
+  }
+  .active{
+    background: white;
+    color: #000;
   }
 }

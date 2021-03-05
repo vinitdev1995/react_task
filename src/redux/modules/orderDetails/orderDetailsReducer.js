@@ -12,13 +12,15 @@ export const orderDetailsReducer = handleActions(
     [requestSuccess(OrderDetailsConstants.FETCH_ORDER_DETAILS)]: (
       state,
       action
-    ) => ({
-      ...state,
-      details: action.payload.orders || null,
-      fetchOrderDetailsLoading: false,
-      fetchOrderDetailsFailure: false,
-      fetchOrderDetailsLoaded: true
-    }),
+    ) => {
+      return {
+        ...state,
+        details: action.payload.orders || null,
+        fetchOrderDetailsLoading: false,
+        fetchOrderDetailsFailure: false,
+        fetchOrderDetailsLoaded: true
+      };
+    },
     [requestPending(OrderDetailsConstants.FETCH_ORDER_DETAILS)]: state => ({
       ...state,
       fetchOrderDetailsLoading: true,

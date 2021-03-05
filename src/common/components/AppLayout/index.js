@@ -57,7 +57,7 @@ const AppLayout = ({ children }) => {
         <div className="app-logo">TEST TASK</div>
         <Divider className="divider" />
         <List>
-          <ListItem className="nav-link" button>
+          <ListItem className={`nav-link active`} button>
             <ListItemText primary="Dashboard" />
           </ListItem>
         </List>

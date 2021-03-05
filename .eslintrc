@@ -14,6 +14,7 @@
   "plugins": ["prettier", "react", "react-hooks", "import"],
   "rules": {
     "no-console": "off",
+    "no-debugger":"off",
     "no-trailing-spaces": "error",
     "object-curly-newline": "off",
     "max-len": ["error", { "code": 120 }],
@@ -22,22 +23,6 @@
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "import/prefer-default-export": 0,
     "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
-    "react/sort-prop-types": ["error", {
-      "callbacksLast": true,
-      "ignoreCase": false,
-      "requiredFirst": true,
-      "sortShapeProp": true,
-      "noSortAlphabetically": false
-    }],
-    "comma-dangle": [
-      "error", {
-        "arrays": "always-multiline",
-        "objects": "only-multiline",
-        "imports": "only-multiline",
-        "exports": "always-multiline",
-        "functions": "never"
-      }
-    ],
     "react/prop-types": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": 0,
