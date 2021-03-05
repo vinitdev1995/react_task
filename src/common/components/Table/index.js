@@ -199,7 +199,13 @@ const TableReusable = props => {
   }))(TableRow);
   return (
     <div className={classes.root}>
-      <h2>Order Data</h2>
+      <h2
+        style={{
+          margin: 0
+        }}
+      >
+        Order Data
+      </h2>
       <Paper className={(classes.paper, "list-view")}>
         <TableContainer>
           <Table
