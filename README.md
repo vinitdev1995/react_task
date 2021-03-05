@@ -16,6 +16,6 @@ You will also see any lint errors in the console.
 
 ## Run Project on unsecure chrome
 
-Step 1: Press Window Key and Open Run
-Step 2: Paste Command ==> "chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security"
-setp 3: In Chrome Browser Open Url ==> "http://localhost:3000"
+Step 1: Press Window Key and Open "Run" \
+Step 2: Paste this Command ==> "chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security"  and press enter button \
+setp 3: In Chrome Browser, Open this Url ==> "http://localhost:3000"
